@@ -4,7 +4,7 @@ import concurrent.futures
 
 def check_proxy(proxy):
     try:
-        response = requests.get("https://google.com", proxies={"https": proxy}, timeout=5)
+        response = requests.get("https://google.com", proxies={"https": proxy}, timeout=5)//there may be any site at the req.get url but use the popular one''s only bcz some may be blocked
         if response.status_code == 200:
             return proxy
         else:
